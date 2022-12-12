@@ -21,12 +21,12 @@ Five buttons are connected to the five analog inputs on the Arduino, and 7 LEDs 
 
 ## Wiring Diagram
 
-![Wiring Diagram](wiring-diagram.png)
+![Wiring Diagram](photos/wiring-diagram.png)
 
 There's definitely ways to simplify this, but I didn't get around to them - such as wiring the LED resistors directly to ground from the cathode instead of between the anode and digital out.
 
 ## Photo
 
-![The project all wired up](photo.jpeg)
+![The project all wired up](photos/photo.jpeg)
 
 Also I didn't feel like making short jumper wires for the buttons' connections to +5V so I just used super weak 10ohm resistors.
