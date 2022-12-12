@@ -30,3 +30,21 @@ There's definitely ways to simplify this, but I didn't get around to them - such
 ![The project all wired up](photos/photo.jpeg)
 
 Also I didn't feel like making short jumper wires for the buttons' connections to +5V so I just used super weak 10ohm resistors.
+
+## Issues
+
+Most of the problems I encountered in this fell into one of two categories:
+
+- Software logic
+- Arduino output
+
+I did not realize that you have to setup the pins with a call to `pinMode()`, so I was getting strange low voltages and unpredictable behavior on the LEDs for a while. Once I found the `pinMode()` problem it was an easy fix.
+
+Otherwise the only other types of issues I had were just in debugging my own code. I accidentally wrote in a memory leak at one point, and I had problems getting a switch case to be caught (still boggled about that one). Otherwise, this project was pretty straightforward and easy to get done.
+
+## Future Improvements
+
+If given more time, I would spend some time refactoring the code to make it a bit more robust, adaptable, and configurable. I’d use the Button class in combination with a Sequence or Melody class to
+make it possible to have more than one song played. Right now it’s pretty rigid.
+
+I’d also add more buttons to actually be able to play all seven (or more) notes, but my kit only came with five.
